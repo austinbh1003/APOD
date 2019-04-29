@@ -12,5 +12,5 @@ export interface ApodState {
 }
 
 export interface GlobalState {
-  Apod: ApodState;
+  apod: ApodState;
 }
