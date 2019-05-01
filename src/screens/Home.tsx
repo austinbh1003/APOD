@@ -28,6 +28,8 @@ const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   margin: 0 20px 20px 5px;
+  flex: 1;
+  min-width: 33%;
 `;
 
 interface Props {

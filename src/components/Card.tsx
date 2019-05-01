@@ -6,6 +6,9 @@ const Wrapper = styled.div`
   border-radius: 12px;
   display: flex;
   overflow: hidden;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Card: StatelessComponent = ({children}) => (
