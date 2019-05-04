@@ -27,8 +27,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-  line-height: 1;
-  background: rgb(249, 245, 242);
+	line-height: 1;
+	height: 100%;
+	background: rgb(10, 15, 27);
+	/* background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%); */
+	color: rgb(240, 240, 240);
 }
 ol, ul {
 	list-style: none;

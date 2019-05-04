@@ -2,17 +2,17 @@ import React, { StatelessComponent } from 'react';
 import styled from 'styled-components';
 
 const Image = styled.img`
-  max-height: 600px;
   width: 100%;
+  flex: 2;
+  border-radius: 12px;
+  box-shadow: 0 0 15px 5px rgba(0,0,0,.15);
+  min-width: 100px;
 `;
 
 const Wrapper = styled.div`
+  flex: 6;
   display: block;
-  border-radius: 12px;
-  box-shadow: 0 0 15px 5px rgba(0,0,0,.15);
   margin: 20px;
-  position: relative;
-  overflow: hidden;
 `;
 
 interface Props {
@@ -20,7 +20,9 @@ interface Props {
 }
 
 const Picture:StatelessComponent<Props> = ({src}) => (
-  <Image src={src} alt="apod" />
+  <Wrapper>
+    <Image src={src} alt="apod" />
+  </Wrapper>
 )
 
 export default Picture;

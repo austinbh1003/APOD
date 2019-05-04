@@ -7,8 +7,8 @@ const Wrapper = styled.div`
 
 const TitleText = styled.h1`
   font-weight: 700;
-  font-size: 60px;
-  color: rgba(0,0,0,.87);
+  font-size: 40px;
+  
 `;
 
 const SubtitleText = styled.h2`

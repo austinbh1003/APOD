@@ -2,10 +2,6 @@ import React, { StatelessComponent } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   text-align: center;
   text-decoration: none;
   margin: 20px;
@@ -14,7 +10,7 @@ const Wrapper = styled.div`
 
 const Link = styled.a`
   text-decoration: none;
-  color: rgb(12, 13, 16);
+  color: #eee;
   font-size: 18px;
 `;
 
