@@ -6,7 +6,8 @@ const Image = styled.img`
   flex: 2;
   border-radius: 12px;
   box-shadow: 0 0 15px 5px rgba(0,0,0,.15);
-  min-width: 100px;
+  min-width: 300px;
+  cursor: pointer;
 `;
 
 const Wrapper = styled.div`
@@ -17,10 +18,11 @@ const Wrapper = styled.div`
 
 interface Props {
   src: string;
+  onClick: () => void;
 }
 
-const Picture:StatelessComponent<Props> = ({src}) => (
-  <Wrapper>
+const Picture:StatelessComponent<Props> = ({src, onClick}) => (
+  <Wrapper onClick={onClick}>
     <Image src={src} alt="apod" />
   </Wrapper>
 )

@@ -6,7 +6,7 @@ const Wrapper = styled.div`
 `;
 
 const TitleText = styled.h1`
-  font-weight: 700;
+  font-weight: 900;
   font-size: 40px;
   
 `;

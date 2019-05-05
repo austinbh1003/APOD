@@ -1,8 +1,7 @@
 import React, { StatelessComponent } from 'react';
-import styled from 'styled-components';
 
 const Loader: StatelessComponent = () => (
-  <a>loading</a> 
+  <p>Loading</p>
 )
 
 export default Loader;

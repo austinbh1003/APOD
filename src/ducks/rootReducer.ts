@@ -1,8 +1,10 @@
-import { combineReducers } from 'redux'
-import apod from './apod'
+import { combineReducers } from 'redux';
+import apod from './apod';
+import ui from './ui';
 
 const rootReducer = combineReducers({
-  apod
+  apod,
+  ui
 })
 
 export default rootReducer;

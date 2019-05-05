@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { ApodState } from '../interfaces/state';
+import { ApodState, PictureData } from '../interfaces/state';
 
 const LOAD_APOD = 'apod/LOAD_APOD';
 const LOAD_APOD_SUCCESS = 'apod/LOAD_APOD_SUCCESS';
@@ -32,11 +32,11 @@ export default (state: ApodState = initialState, action: any = {}) => {
   }
 }
 
-export const loadApodSuccess = (data: any) => (
+export const loadApodSuccess = (data: PictureData) => (
   { type: LOAD_APOD_SUCCESS, payload: data }
 )
 
-export const loadApodError = (error: any) => (
+export const loadApodError = (error: Error) => (
   { type: LOAD_APOD_ERROR, payload: error }
 )
 
@@ -45,7 +45,7 @@ export const loadApod = () => {
     dispatch({type: LOAD_APOD});
     fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY") //&count=5
       .then((data: any) => data.json())
-      .then((data: any) => dispatch(loadApodSuccess(data)))
+      .then((data: PictureData) => dispatch(loadApodSuccess(data)))
       .catch((err: Error) => dispatch(loadApodError(err)))
   }
 }

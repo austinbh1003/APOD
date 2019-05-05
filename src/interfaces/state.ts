@@ -11,6 +11,11 @@ export interface ApodState {
   pictureData: null | PictureData;
 }
 
+export interface UiState {
+  fullScreenViewVisible: boolean;
+}
+
 export interface GlobalState {
   apod: ApodState;
+  ui: UiState;
 }
