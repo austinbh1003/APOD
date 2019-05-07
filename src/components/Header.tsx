@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `;
 
 const CurrentDate = styled.p`
-  font-size: 20px;
+  font-size: 15px;
   color: #bebebe;
 `;
 

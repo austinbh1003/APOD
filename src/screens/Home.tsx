@@ -41,6 +41,26 @@ const TextWrapper = styled.div`
   min-width: 50%;
 `;
 
+const BackgroundWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+`;
+
+const BackgroundCircle = styled.div`
+  height: 100vw;
+  width: 100vw;
+  border-radius: 50vw;
+  background: rgba(255, 255, 255, 0.03);
+  position: absolute;
+  left: -20vw;
+  bottom: -40vw;
+`;
+
 interface Props {
   loadApod: () => void;
   loading: boolean;
@@ -63,6 +83,9 @@ class Home extends Component<Props> {
     const description = pictureData ? pictureData.explanation : "";
     return (
       <Wrapper>
+        <BackgroundWrapper>
+          <BackgroundCircle />
+        </BackgroundWrapper>
         {fullScreenViewVisible && <FullScreenView imgSrc={imgUrl} closeFullScreenView={closeFullScreenView} />}
         <Header />
         {loading ? <Loader /> : (
