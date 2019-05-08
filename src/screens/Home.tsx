@@ -7,12 +7,16 @@ import FullScreenView from '../components/FullScreenView';
 import { PictureData } from '../interfaces/state';
 import Header from '../components/Header';
 
+const PageWrapper = styled.div`
+  position: relative;
+`;
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 10%;
-  min-height: 100vh;
   justify-content: space-between;
+  min-height: 100vh;
 `;
 
 const PictureTitle = styled.h3`
@@ -82,23 +86,25 @@ class Home extends Component<Props> {
     const title = pictureData ? pictureData.title : "";
     const description = pictureData ? pictureData.explanation : "";
     return (
-      <Wrapper>
+      <PageWrapper>
         <BackgroundWrapper>
           <BackgroundCircle />
         </BackgroundWrapper>
         {fullScreenViewVisible && <FullScreenView imgSrc={imgUrl} closeFullScreenView={closeFullScreenView} />}
-        <Header />
-        {loading ? <Loader /> : (
-          <ContentWrapper>
-            <Picture src={imgUrl} onClick={() => openFullScreenView()} />
-            <TextWrapper>
-              <PictureTitle>{title}</PictureTitle>
-              <Description>{description}</Description>
-            </TextWrapper>
-          </ContentWrapper>
-        )}
-        <Footer />
-      </Wrapper>
+        <Wrapper>
+          <Header />
+          {loading ? <Loader /> : (
+            <ContentWrapper>
+              <Picture src={imgUrl} onClick={() => openFullScreenView()} />
+              <TextWrapper>
+                <PictureTitle>{title}</PictureTitle>
+                <Description>{description}</Description>
+              </TextWrapper>
+            </ContentWrapper>
+          )}
+          <Footer />
+        </Wrapper>
+      </PageWrapper>
     )
   }
 }

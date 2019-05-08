@@ -15,10 +15,11 @@ const FullScreenWrapper = styled.div`
 `;
 
 const Picture = styled.img`
-  height: 100%;
-  width: auto;
+  max-height: 100%;
+  max-width: 100%;
   transition: 0.2s;
   opacity: 0;
+  object-fit: contain;
 `;
 
 interface Props {
