@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const FullScreenWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -12,6 +12,7 @@ const FullScreenWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 3%;
+  z-index: 1;
 `;
 
 const Picture = styled.img`

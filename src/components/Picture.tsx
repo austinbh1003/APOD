@@ -6,8 +6,15 @@ const Image = styled.img`
   flex: 2;
   border-radius: 12px;
   box-shadow: 0 0 15px 5px rgba(0,0,0,.15);
-  min-width: 300px;
+  min-width: 200px;
   cursor: pointer;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    box-shadow: 0 0 20px 10px rgba(0,0,0,.25);
+    transform: scale(1.01);
+    z-index: 0;
+  }
 `;
 
 const Wrapper = styled.div`

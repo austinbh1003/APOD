@@ -12,7 +12,8 @@ const Wrapper = styled.div`
 `;
 
 const CurrentDate = styled.p`
-  font-size: 15px;
+  font-size: 13px;
+  text-align: right;
   color: #bebebe;
 `;
 
