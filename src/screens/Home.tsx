@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Footer from '../components/Footer';
 import Loader from '../components/Loader';
 import Picture from '../components/Picture';
+import Video from '../components/Video';
 import FullScreenView from '../components/FullScreenView';
 import { PictureData } from '../interfaces/state';
 import Header from '../components/Header';
@@ -82,7 +83,8 @@ class Home extends Component<Props> {
 
   render() {
     const { loading, pictureData, fullScreenViewVisible, openFullScreenView, closeFullScreenView } = this.props;
-    const imgUrl = pictureData ? pictureData.url : "";
+    const mediaUrl = pictureData ? pictureData.url : "";
+    const isVideo = mediaUrl.includes("youtube");
     const title = pictureData ? pictureData.title : "";
     const description = pictureData ? pictureData.explanation : "";
     return (
@@ -90,12 +92,12 @@ class Home extends Component<Props> {
         <BackgroundWrapper>
           <BackgroundCircle />
         </BackgroundWrapper>
-        {fullScreenViewVisible && <FullScreenView imgSrc={imgUrl} closeFullScreenView={closeFullScreenView} />}
+        {fullScreenViewVisible && <FullScreenView imgSrc={mediaUrl} closeFullScreenView={closeFullScreenView} />}
         <Wrapper>
           <Header />
           {loading ? <Loader /> : (
             <ContentWrapper>
-              <Picture src={imgUrl} onClick={() => openFullScreenView()} />
+              {isVideo ? <Video src={mediaUrl} /> : <Picture src={mediaUrl} onClick={() => openFullScreenView()} />}
               <TextWrapper>
                 <PictureTitle>{title}</PictureTitle>
                 <Description>{description}</Description>
