@@ -1,9 +1,9 @@
 export interface PictureData {
   date: string;
   explanation: string;
-  hdurl: string;
   title: string;
   url: string;
+  hdurl?: string;
 }
 
 export interface ApodState {

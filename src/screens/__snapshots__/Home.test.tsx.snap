@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home screen renders correctly while loading 1`] = `
+<div
+  className="sc-bdVaJa EXKLM"
+>
+  <div
+    className="sc-bZQynM cnTDcC"
+  >
+    <div
+      className="sc-gzVnrw gQCyHa"
+    />
+  </div>
+  <div
+    className="sc-bwzfXH hYfLmM"
+  >
+    <Header />
+    <Loader />
+    <Footer />
+  </div>
+</div>
+`;
+
+exports[`Home screen renders correctly with a video loaded 1`] = `
+<div
+  className="sc-bdVaJa EXKLM"
+>
+  <div
+    className="sc-bZQynM cnTDcC"
+  >
+    <div
+      className="sc-gzVnrw gQCyHa"
+    />
+  </div>
+  <div
+    className="sc-bwzfXH hYfLmM"
+  >
+    <Header />
+    <div
+      className="sc-bxivhb kJYdCf"
+    >
+      <Video
+        src="https://www.youtube.com/embed/my1euFQHH-o?rel=0"
+      />
+      <div
+        className="sc-EHOje iBowpJ"
+      >
+        <h3
+          className="sc-htpNat ZIhSq"
+        >
+          Planets of the Solar System: Tilts and Spins
+        </h3>
+        <p
+          className="sc-ifAKCX gmAkgN"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+    <Footer />
+  </div>
+</div>
+`;
+
+exports[`Home screen renders correctly with an image loaded 1`] = `
+<div
+  className="sc-bdVaJa EXKLM"
+>
+  <div
+    className="sc-bZQynM cnTDcC"
+  >
+    <div
+      className="sc-gzVnrw gQCyHa"
+    />
+  </div>
+  <div
+    className="sc-bwzfXH hYfLmM"
+  >
+    <Header />
+    <div
+      className="sc-bxivhb kJYdCf"
+    >
+      <Picture
+        onClick={[Function]}
+        src="https://example.com/image.jpg"
+      />
+      <div
+        className="sc-EHOje iBowpJ"
+      >
+        <h3
+          className="sc-htpNat ZIhSq"
+        >
+          Sample title
+        </h3>
+        <p
+          className="sc-ifAKCX gmAkgN"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+    <Footer />
+  </div>
+</div>
+`;
