@@ -12,7 +12,10 @@ const TitleText = styled.h1`
 `;
 
 const SubtitleText = styled.h2`
-
+  font-size: 14px;
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
 `;
 
 interface Props {
